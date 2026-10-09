@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'none'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>三上風侍朗 - Links</title>
+
+    <!-- フォントの読み込み (Playfair Display for headings, Lora for body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
+
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* 爽やかなスカイブルーの背景と空気を模した微かなグラデーション */
+            background-color: #e3f2fd;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(187, 222, 251, 0.6) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(129, 212, 250, 0.4) 0%, transparent 50%);
+            color: #0d47a1; /* ディープブルーのテキスト */
+            font-family: 'Lora', serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 60px 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* 背景の有機的な装飾（青空に浮かぶ柔らかな光や雲のイメージ） */
+        .bg-decoration {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 800px;
+            height: 100%;
+            background-image: 
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400"><path d="M200 10C90.5 10 1 99.5 1 209s89.5 199 199 199 199-89.5 199-199S309.5 10 200 10zm0 382C99.4 392 18 309.6 18 209S99.4 26 200 26s182 82.4 182 183-82.4 183-182 183z" fill="%2329b6f6" fill-opacity="0.08"/></svg>'),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><path d="M150 10C71.6 10 8 73.6 8 152s63.6 142 142 142 142-63.6 142-142S228.4 10 150 10zm0 268C80.8 278 24 221.2 24 152S80.8 26 150 26s126 56.8 126 126-56.8 126-126 126z" fill="%2329b6f6" fill-opacity="0.06"/></svg>');
+            background-repeat: no-repeat;
+            background-position: -100px -100px, 400px 200px;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.8;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 520px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+        }
+
+        /* プロフィール画像 */
+        .avatar-container {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #ffffff; /* 白い縁取り */
+            box-shadow: 0 4px 10px rgba(13, 71, 161, 0.15);
+            margin-bottom: 24px;
+            background-color: #ffffff;
+        }
+
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ヘッダー情報 */
+        .links-label {
+            font-family: 'Lora', serif;
+            font-size: 13px;
+            letter-spacing: 1.5px;
+            color: #0288d1; /* アクセントカラー（明るめの青） */
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #0d47a1; /* 濃いブルー */
+        }
+
+        .username {
+            font-family: 'Lora', serif;
+            font-size: 16px;
+            color: #1565c0;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .status {
+            font-family: 'Lora', serif;
+            font-size: 14px;
+            color: #1976d2;
+            margin-bottom: 48px;
+            font-style: italic;
+        }
+
+        /* リンクカード一覧 */
+        .link-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff; /* 白いカード */
+            border: 1px solid #b3e5fc;
+            padding: 20px 24px;
+            border-radius: 16px; /* 大きな角丸 */
+            text-decoration: none;
+            color: #0d47a1;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(13, 71, 161, 0.04);
+        }
+
+        .link-card:hover {
+            background-color: #f1f8fe; /* ホバーで薄いブルー */
+            border-color: #81d4fa;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(13, 71, 161, 0.1);
+        }
+
+        .link-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .link-title {
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .link-arrow {
+            font-size: 16px;
+            color: #90caf9;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .link-card:hover .link-arrow {
+            color: #0d47a1;
+            transform: translateX(3px); /* ホバーで矢印が少し動く */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 背景の装飾 -->
+    <div class="bg-decoration"></div>
+
+    <div class="container">
+        <!-- プロフィールアイコン -->
+        <div class="avatar-container">
+            <img src="images/avatar.png" alt="Cafe Logo / Latte Art">
+        </div>
+
+        <div class="links-label">脆弱性診断士・ペンテスター志望</div>
+        <h1>三上風侍朗</h1>
+        <div class="username"> 　これは三上風侍朗のSNSアカウントをまとめたリンク集です！<br/>
+        サイバーセキュリティに関する取り組みについて発信をしています！</div>
+        <div class="status"></div>
+
+        <!-- リンクカード群 -->
+        <div class="link-list">
+            <!-- 1. ポートフォリオ： -->
+              <a href="https://x86cat.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-card">
+                <div class="link-left">
+                    <span class="link-title">　　　三上風侍朗の活動履歴について書かれたサイト</span>
+                </div>
+                <div class="link-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+             <!-- 4. X -->
+            <a href="https://x.com/YamadaTaromlok" target="_blank" rel="noopener noreferrer" class="link-card">
+                <div class="link-left">
+                    <span class="link-title">　　　　　X（活動についてツイートしています）</span>
+                </div>
+                <div class="link-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <!-- 2. note -->
+            <a href="https://note.com/limber_auklet93" target="_blank" rel="noopener noreferrer" class="link-card">
+                <div class="link-left">
+                    <span class="link-title">　　　　note（技術ブログなどを投稿しています）</span>
+                </div>
+                <div class="link-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+            <!-- 3. GitHub -->
+            <a href="https://github.com/Fuji60-x86cat" target="_blank" rel="noopener noreferrer" class="link-card">
+                <div class="link-left">
+                    <span class="link-title">　　GitHub（作成したプログラム等を公開しています）</span>
+                </div>
+                <div class="link-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            </a>
+
+           
+
+            <!-- 5. ポートフォリオサイト本体 -->
+          
+        </div>
+    </div>
+
+</body>
+</html>
