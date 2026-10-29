@@ -19,6 +19,13 @@
      画像をはっきり見せたいときは下げる（例：0.5） */
   --bg-overlay: 0;
 
+  /* 【変更②-b】背景画像の色味の調整（画像が薄いときはここで濃くする）
+     saturate = 色の鮮やかさ（1 = そのまま、1.5 = 鮮やか）
+     contrast = 明暗の差（1 = そのまま、1.4 = くっきり）
+     brightness = 明るさ（1 = そのまま、0.8 = 少し暗く）
+     何も調整しないときは  none  にしてください */
+  --bg-filter: saturate(1.8) contrast(1.5) brightness(0.8);
+
   --text-dark:   #0d47a1;   /* 【変更③】濃い青（見出し・文字） */
   --text-mid:    #1565c0;   /* 【変更④】説明文の青 */
   --accent:      #0288d1;   /* 【変更⑤】アクセントの青（ラベル） */
@@ -70,6 +77,7 @@ body::before {
   inset: 0;
   z-index: -1;
   pointer-events: none;
+  filter: var(--bg-filter);
   background:
     linear-gradient(rgba(255, 255, 255, var(--bg-overlay)), rgba(255, 255, 255, var(--bg-overlay))),
     var(--bg-image) center / cover no-repeat,
