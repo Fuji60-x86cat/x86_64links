@@ -1,46 +1,29 @@
 <!DOCTYPE html>
-<!-- ====================================================================
-     三上風侍朗 リンク集（index.html）
 
-     【ファイルの構造】
-       index.html          ← このファイル（中身）
-       style.css           ← 見た目（CSS）
-       images/avatar.png   ← プロフィール画像
-       images/background.jpg ← 背景画像（無くてもOK。無ければ水色の背景になります）
-
-     【背景画像の入れ方】
-       1. 使いたい画像を images/background.jpg という名前で置く
-       2. 文字が読みにくいときは style.css の --bg-overlay の数字を上げる
-
-     【リンクを増やすとき】
-       下の <a class="link-card"> ... </a> を 1 つコピーして、
-       href と文字を書き換えるだけです
-     ==================================================================== -->
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- セキュリティ設定：CSS を style.css に分けたので、style の 'unsafe-inline' は外しました。
-       背景画像やアイコン画像は、このサイトと同じ場所のものだけ読み込めます -->
+
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <title>三上風侍朗 - Links</title>
 
-  <!-- フォントの読み込み (Playfair Display for headings, Lora for body) -->
+
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- 矢印アイコン（Font Awesome） -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-  <!-- 見た目（CSS）は style.css に分けました -->
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="container">
-    <!-- プロフィールアイコン -->
+ 
     <div class="avatar-container">
       <img src="images/avatar.png" alt="三上風侍朗のプロフィール画像">
     </div>
@@ -52,28 +35,27 @@
       サイバーセキュリティに関する取り組みについて発信をしています！
     </p>
 
-    <!-- リンクカード群 -->
     <div class="link-list">
 
-      <!-- 1. ポートフォリオ -->
+    
       <a href="https://fuji60-x86cat.github.io/x86cat/" target="_blank" rel="noopener noreferrer" class="link-card">
         <span class="link-title">三上風侍朗の活動履歴について書かれたサイト</span>
         <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
       </a>
 
-      <!-- 2. X -->
+
       <a href="https://x.com/YamadaTaromlok" target="_blank" rel="noopener noreferrer" class="link-card">
         <span class="link-title">X<span class="link-note">活動についてツイートしています</span></span>
         <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
       </a>
 
-      <!-- 3. note -->
+   
       <a href="https://note.com/limber_auklet93" target="_blank" rel="noopener noreferrer" class="link-card">
         <span class="link-title">note<span class="link-note">技術ブログなどを投稿しています</span></span>
         <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
       </a>
 
-      <!-- 4. GitHub -->
+    
       <a href="https://github.com/Fuji60-x86cat" target="_blank" rel="noopener noreferrer" class="link-card">
         <span class="link-title">GitHub<span class="link-note">作成したプログラム等を公開しています</span></span>
         <span class="link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
